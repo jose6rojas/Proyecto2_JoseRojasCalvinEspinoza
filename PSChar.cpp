@@ -1,4 +1,4 @@
-// PSChar.cpp
+// PlayStationCharacter.cpp
 
 PSChar::PSChar()
 {
