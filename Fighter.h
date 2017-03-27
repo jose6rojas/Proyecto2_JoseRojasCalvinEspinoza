@@ -13,7 +13,7 @@ class Fighter
 
 	public:
 		Fighter();
-		Fighter(string); // nombre, wins, losses
+		Fighter(string); // nombre
 
 		// nombre
 		virtual void setNombre(string);

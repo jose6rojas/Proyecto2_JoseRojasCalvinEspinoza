@@ -20,14 +20,21 @@ class PowerRangerRojo : public PowerRanger
 
 		// METODOS DE LA CLASE PowerRanger
 		// ataque
-		virtual void setAtaque(int);
-		virtual int getAtaque();
-
+		void setAtaque(int);
+		int getAtaque();
+		
 		// defensa
-		virtual void setDefensa(int);
-		virtual double getDefensa();
-
+		void setDefensa(int);
+		double getDefensa();
+		
 		// habilidad especial
-		virtual void setTieneHE(bool);
-		virtual bool getTieneHE();
+		void setTieneHE(bool);
+		bool getTieneHE();
+		
+		// METODOS DE LA CLASE Fighter
+		// nombre
+		void setNombre(string);
+		string getNombre();
+		
+		string toString();
 };
