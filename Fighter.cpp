@@ -4,7 +4,7 @@
 
 Fighter::Fighter()
 {
-	nombre = NULL;
+	nombre = "";
 }
 Fighter::Fighter(string nombre)
 {
@@ -14,7 +14,7 @@ Fighter::Fighter(string nombre)
 // nombre
 void Fighter::setNombre(string nombre)
 {
-	this -> nombre = NULL;
+	this -> nombre = "";
 }
 string Fighter::getNombre()
 {
