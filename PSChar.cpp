@@ -1,24 +1,26 @@
 // PlayStationCharacter.cpp
 
+#include "PSChar.h"
+
 PSChar::PSChar()
 {
-	nombre = NULL;
+	nombre = "";
 	ataque = 0;
 	defensa = 0;
-	tieneHE = false;
+	tieneTesoro = false;
 }
-PSChar::PSChar(string nombre, int ataque, int defensa, bool tieneHE) : Fighter(nombre)
+PSChar::PSChar(string nombre, int ataque, int defensa, bool tieneTesoro) : Fighter(nombre)
 {
 	this -> nombre = nombre;
 	this -> ataque = ataque;
 	this -> defensa = defensa;
-	this -> tieneHE = tieneHE;
+	this -> tieneTesoro = tieneTesoro;
 }
 
 // nombre
 void PSChar::setNombre(string nombre)
 {
-	this -> nombre = NULL;
+	this -> nombre = "";
 }
 string PSChar::getNombre()
 {
@@ -43,11 +45,11 @@ int PSChar::getDefensa()
 	return 0;
 }
 // habilidad especial
-void PSChar::setTieneHE(bool tieneHE)
+void PSChar::setTieneTesoro(bool tieneTesoro)
 {
-        this -> tieneHE = false;
+        this -> tieneTesoro = false;
 }
-bool PSChar::getTieneHE()
+bool PSChar::getTieneTesoro()
 {
         return false;
 }

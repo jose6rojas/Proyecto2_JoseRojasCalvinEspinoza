@@ -1,14 +1,14 @@
 // PowerRangerRojo.cpp
 
-#include "PowerRanger.h"
+#include "PowerRangerRojo.h"
 
 PowerRangerRojo::PowerRangerRojo()
 {
-	nombre = NULL;
+	nombre = "";
 	ataque = 0;
 	defensa = 0;
 	tieneHE = false;
-	megazord = NULL;
+	megazord = "";
 }
 PowerRangerRojo::PowerRangerRojo(string nombre, int ataque, int defensa, bool tieneHE, string megazord) : PowerRanger(nombre, ataque, defensa, tieneHE)
 {

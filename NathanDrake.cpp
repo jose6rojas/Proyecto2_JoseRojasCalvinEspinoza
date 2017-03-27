@@ -4,18 +4,18 @@
 
 NathanDrake::NathanDrake()
 {
-	nombre = NULL;
+	nombre = "";
 	ataque = 0;
 	defensa = 0;
-	tieneHE = false;
-	ciudad = NULL;
+	tieneTesoro = false;
+	ciudad = "";
 }
-NathanDrake::NathanDrake(string nombre, int ataque, int defensa, bool tieneHE, string ciudad) : PSChar(nombre, ataque, defensa, tieneHE)
+NathanDrake::NathanDrake(string nombre, int ataque, int defensa, bool tieneTesoro, string ciudad) : PSChar(nombre, ataque, defensa, tieneTesoro)
 {
 	this -> nombre = nombre;
 	this -> ataque = ataque;
 	this -> defensa = defensa;
-	this -> tieneHE = tieneHE;
+	this -> tieneTesoro = tieneTesoro;
 	this -> ciudad = ciudad;
 }
 
@@ -62,7 +62,7 @@ void NathanDrake::setCiudad(string ciudad)
 }
 string NathanDrake::getCiudad()
 {
-	return megazord;
+	return ciudad;
 }
 
 // toString

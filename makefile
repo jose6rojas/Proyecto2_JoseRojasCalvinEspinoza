@@ -1,5 +1,5 @@
 Main:	Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o
-	g++ Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o -o Main
+	g++ Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o -o Main
 
 Main.o:	Main.cpp Fighter.h PowerRanger.h Superhero.h NintendoChar.h PSChar.h PowerRangerRojo.h Spiderman.h Mario.h NathanDrake.h
 	g++ -c Main.cpp

@@ -21,7 +21,7 @@ class Superhero : public Fighter
 
 		// defensa
 		virtual void setDefensa(int);
-		virtual double getDefensa();
+		virtual int getDefensa();
 
 		// hammer
 		virtual void setTieneHE(bool);

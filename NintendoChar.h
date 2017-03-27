@@ -21,7 +21,7 @@ class NintendoChar : public Fighter
 
 		// defensa
 		virtual void setDefensa(int);
-		virtual double getDefensa();
+		virtual int getDefensa();
 
 		// hammer
 		virtual void setTieneHammer(bool);

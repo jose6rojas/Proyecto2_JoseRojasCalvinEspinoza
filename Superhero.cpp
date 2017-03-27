@@ -5,15 +5,15 @@ Superhero::Superhero()
 	nombre = "";
 	ataque = 0;
 	defensa = 0;
-	tieneHe = false;
+	tieneHE = false;
 }
 
-Superhero::Superhero(string pNombre, int pAtaque, int pDefensa, bool pTieneHe) : Fighter(pNombre)
+Superhero::Superhero(string pNombre, int pAtaque, int pDefensa, bool pTieneHE) : Fighter(pNombre)
 {
 	nombre = pNombre;
 	ataque = pAtaque;
 	defensa = pDefensa;
-	tieneHe = pTieneHe;
+	tieneHE = pTieneHE;
 }
 void Superhero::setAtaque(int ataque) {
 	this->ataque = ataque;
@@ -31,12 +31,12 @@ int Superhero::getDefensa() {
 	return this->defensa;
 }
 
-void Superhero::setTieneHe(bool tieneHe) {
-	this->tieneHe = tieneHe;
+void Superhero::setTieneHE(bool tieneHE) {
+	this->tieneHE = tieneHE;
 }
 
-bool Superhero::getTieneHe() {
-	 return this->tieneHe;
+bool Superhero::getTieneHE() {
+	 return this->tieneHE;
  }
 
 void Superhero::setNombre(string nombre) {

@@ -22,19 +22,19 @@ class NathanDrake : public PSChar
 		// ataque
 		void setAtaque(int);
 		int getAtaque();
-		
+
 		// defensa
 		void setDefensa(int);
-		double getDefensa();
-		
+		int getDefensa();
+
 		// habilidad especial
-		void setTieneHE(bool);
-		bool getTieneHE();
-		
+		void setTieneTesoro(bool);
+		bool getTieneTesoro();
+
 		// METODOS DE LA CLASE Fighter
 		// nombre
 		void setNombre(string);
 		string getNombre();
-		
+
 		string toString();
 };

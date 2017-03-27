@@ -1,8 +1,10 @@
 // PowerRanger.cpp
 
+#include "PowerRanger.h"
+
 PowerRanger::PowerRanger()
 {
-	nombre = NULL;
+	nombre = "";
 	ataque = 0;
 	defensa = 0;
 	tieneHE = false;
@@ -18,7 +20,7 @@ PowerRanger::PowerRanger(string nombre, int ataque, int defensa, bool tieneHE) :
 // nombre
 void PowerRanger::setNombre(string nombre)
 {
-	this -> nombre = NULL;
+	this -> nombre = "";
 }
 string PowerRanger::getNombre()
 {

@@ -14,9 +14,9 @@ class Spiderman : public Superhero
 		Spiderman(string, int, int, bool, string);
 		// nombre, ataque, defensa, tieneHE, comic
 
-		// megazord
-		void setMegazord(string);
-		string getMegazord();
+		// comic
+		void setComic(string);
+		string getComic();
 
 		// METODOS DE LA CLASE Superhero
 		// ataque
@@ -25,7 +25,7 @@ class Spiderman : public Superhero
 
 		// defensa
 		void setDefensa(int);
-		double getDefensa();
+		int getDefensa();
 
 		// habilidad especial
 		void setTieneHE(bool);
