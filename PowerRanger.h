@@ -21,7 +21,7 @@ class PowerRanger : public Fighter
 
 		// defensa
 		virtual void setDefensa(int);
-		virtual double getDefensa();
+		virtual int getDefensa();
 
 		// habilidad especial
 		virtual void setTieneHE(bool);

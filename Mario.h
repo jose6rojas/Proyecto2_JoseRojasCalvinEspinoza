@@ -17,7 +17,7 @@ class Mario : public NintendoChar
 
 		// kingdom
 		void setKingdom(string);
-		string getKindgom();
+		string getKingdom();
 
 		// METODOS DE LA CLASE NintendoChar
 		// ataque
@@ -26,7 +26,7 @@ class Mario : public NintendoChar
 
 		// defensa
 		void setDefensa(int);
-		double getDefensa();
+		int getDefensa();
 
 		// hammer
 		void setTieneHammer(bool);

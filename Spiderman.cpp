@@ -5,17 +5,17 @@ Spiderman::Spiderman()
 	nombre = "";
 	ataque = 0;
 	defensa = 0;
-	tieneHe = false;
-	comic = pComic
+	tieneHE = false;
+	comic = "";
 }
 
-Spiderman::Spiderman(string pNombre, int pAtaque, int pDefensa, bool pTieneHe, string pComic) : Superhero(pNombre, pAtaque, pDefensa, pTieneHe)
+Spiderman::Spiderman(string pNombre, int pAtaque, int pDefensa, bool pTieneHE, string pComic) : Superhero(pNombre, pAtaque, pDefensa, pTieneHE)
 {
 	nombre = pNombre;
 	ataque = pAtaque;
 	defensa = pDefensa;
-	tieneHe = pTieneHe;
-	comic = pComic
+	tieneHE = pTieneHE;
+	comic = pComic;
 }
 
 void Spiderman::setComic(string comic) {
@@ -42,12 +42,12 @@ int Spiderman::getDefensa() {
 	return this->defensa;
 }
 
-void Spiderman::setTieneHe(bool tieneHe) {
-	this->tieneHe = tieneHe;
+void Spiderman::setTieneHE(bool tieneHE) {
+	this->tieneHE = tieneHE;
 }
 
-bool Spiderman::getTieneHe() {
-	 return this->tieneHe;
+bool Spiderman::getTieneHE() {
+	 return this->tieneHE;
  }
 
 void Spiderman::setNombre(string nombre) {

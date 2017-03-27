@@ -22,19 +22,19 @@ class PowerRangerRojo : public PowerRanger
 		// ataque
 		void setAtaque(int);
 		int getAtaque();
-		
+
 		// defensa
 		void setDefensa(int);
-		double getDefensa();
-		
+		int getDefensa();
+
 		// habilidad especial
 		void setTieneHE(bool);
 		bool getTieneHE();
-		
+
 		// METODOS DE LA CLASE Fighter
 		// nombre
 		void setNombre(string);
 		string getNombre();
-		
+
 		string toString();
 };
