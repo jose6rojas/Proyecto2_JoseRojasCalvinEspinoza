@@ -11,8 +11,8 @@ class PowerRangerRojo : public PowerRanger
 
 	public:
 		PowerRangerRojo();
-		PowerRangerRojo(string, int, int, int, int, bool, string);
-		// nombre, wins, losses, ataque, defensa, tieneHE, megazord
+		PowerRangerRojo(string, int, int, bool, string);
+		// nombre, ataque, defensa, tieneHE, megazord
 
 		// megazord
 		void setMegazord(string);

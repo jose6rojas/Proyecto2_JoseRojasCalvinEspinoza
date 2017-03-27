@@ -13,7 +13,7 @@ class PowerRanger : public Fighter
 
 	public:
 		PowerRanger();
-		PowerRanger(string, int, int, int, int, bool); // nombre, wins, losses, ataque, defensa, tieneHE
+		PowerRanger(string, int, int, bool); // nombre, ataque, defensa, tieneHE
 
 		// ataque
 		virtual void setAtaque(int);
@@ -29,17 +29,9 @@ class PowerRanger : public Fighter
 
 		// METODOS DE LA CLASE Fighter
                 // nombre
-                void setNombre(string);
-                string getNombre();
-
-                // wins
-                void setWins(int);
-                int getWins();
-
-                // losses
-                void setLosses(int);
-                int getLosses();
+                virtual void setNombre(string);
+                virtual string getNombre();
 
                 // toString
-                void toString();
+                virtual void toString();
 };
