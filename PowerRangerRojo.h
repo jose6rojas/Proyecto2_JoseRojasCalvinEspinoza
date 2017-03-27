@@ -10,6 +10,40 @@ class PowerRangerRojo : public PowerRanger
 		string megazord;
 
 	public:
+		friend ostream& operator<<(ostream& out, const PowerRangerRojo& m)
+		{
+		     out << m.nombre << "," << m.ataque << "," << m.defensa << "," << m.tieneHE << "," << m.megazord << endl;
+		     return out;
+		 }
+
+		friend istream& operator>>(istream& in, PowerRangerRojo& m){
+			string buffer;
+			getline(in,buffer);
+
+
+
+			string split[5];
+			int str = 0;
+
+			for(int i = 0;i<buffer.size();i++){
+				if(buffer[i]!=','){
+					split[str].append(buffer,i,1);
+
+				}else{
+					str++;
+				}
+			}
+
+			m.nombre = split[0];
+			stringstream (split[1]) >> m.ataque;
+			stringstream (split[2]) >> m.defensa;
+			stringstream (split[3]) >> m.tieneHE;
+			m.megazord = split[4];
+
+
+			return in;
+		}
+
 		PowerRangerRojo();
 		PowerRangerRojo(string, int, int, bool, string);
 		// nombre, ataque, defensa, tieneHE, megazord
