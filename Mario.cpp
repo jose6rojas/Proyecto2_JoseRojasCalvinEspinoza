@@ -6,6 +6,7 @@ Mario::Mario()
 	ataque = 0;
 	defensa = 0;
 	tieneHammer = false;
+	kingdom = pKingdom
 }
 
 Mario::Mario(string pNombre, int pAtaque, int pDefensa, bool pTieneHammer, string pKingdom) : NintendoChar(pNombre, pAtaque, pDefensa, pTieneHammer)
@@ -23,7 +24,7 @@ void setKingdom(string kingdom) {
 
 string getKingdom() {
 	return this->kingdom;
-} 
+}
 
 void NintendoChar::setAtaque(int ataque) {
 	this->ataque = ataque;
