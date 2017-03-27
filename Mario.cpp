@@ -9,7 +9,7 @@ Mario::Mario()
 	kingdom = pKingdom
 }
 
-Mario::Mario(string pNombre, int pAtaque, int pDefensa, bool pTieneHammer, string pKingdom) : NintendoChar(pNombre, pAtaque, pDefensa, pTieneHammer)
+Mario::Mario(string pNombre, int pAtaque, int pDefensa, bool pTieneHammer, string pKingdom) : Mario(pNombre, pAtaque, pDefensa, pTieneHammer)
 {
 	nombre = pNombre;
 	ataque = pAtaque;
@@ -18,47 +18,47 @@ Mario::Mario(string pNombre, int pAtaque, int pDefensa, bool pTieneHammer, strin
 	kingdom = pKingdom
 }
 
-void setKingdom(string kingdom) {
+void Mario::setKingdom(string kingdom) {
 	this->kingdom = kingdom;
 }
 
-string getKingdom() {
+string Mario::getKingdom() {
 	return this->kingdom;
 }
 
-void NintendoChar::setAtaque(int ataque) {
+void Mario::setAtaque(int ataque) {
 	this->ataque = ataque;
 }
 
-int NintendoChar::getAtaque() {
+int Mario::getAtaque() {
 	return this->ataque;
 }
 
-void NintendoChar::setDefensa(int defensa) {
+void Mario::setDefensa(int defensa) {
 	this->defensa = defensa;
 }
 
-int NintendoChar::getDefensa() {
+int Mario::getDefensa() {
 	return this->defensa;
 }
 
-void NintendoChar::setTieneHammer(bool tieneHammer) {
+void Mario::setTieneHammer(bool tieneHammer) {
 	this->tieneHammer = tieneHammer;
 }
 
-bool NintendoChar::getTieneHammer() {
+bool Mario::getTieneHammer() {
 	 return this->tieneHammer;
  }
 
-void NintendoChar::setNombre(string nombre) {
+void Mario::setNombre(string nombre) {
 	 this->nombre = nombre;
  }
 
-string NintendoChar::getNombre() {
+string Mario::getNombre() {
 	return this->nombre;
 }
 
-string NintendoChar::toString()
+string Mario::toString()
 {
 	return nombre;
 }
