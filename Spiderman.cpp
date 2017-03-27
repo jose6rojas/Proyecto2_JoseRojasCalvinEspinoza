@@ -26,39 +26,39 @@ string Spiderman::getComic() {
 	return this->comic;
 }
 
-void NintendoChar::setAtaque(int ataque) {
+void Spiderman::setAtaque(int ataque) {
 	this->ataque = ataque;
 }
 
-int NintendoChar::getAtaque() {
+int Spiderman::getAtaque() {
 	return this->ataque;
 }
 
-void NintendoChar::setDefensa(int defensa) {
+void Spiderman::setDefensa(int defensa) {
 	this->defensa = defensa;
 }
 
-int NintendoChar::getDefensa() {
+int Spiderman::getDefensa() {
 	return this->defensa;
 }
 
-void NintendoChar::setTieneHe(bool tieneHe) {
+void Spiderman::setTieneHe(bool tieneHe) {
 	this->tieneHe = tieneHe;
 }
 
-bool NintendoChar::getTieneHe() {
+bool Spiderman::getTieneHe() {
 	 return this->tieneHe;
  }
 
-void NintendoChar::setNombre(string nombre) {
+void Spiderman::setNombre(string nombre) {
 	 this->nombre = nombre;
  }
 
-string NintendoChar::getNombre() {
+string Spiderman::getNombre() {
 	return this->nombre;
 }
 
-string NintendoChar::toString()
+string Spiderman::toString()
 {
 	return nombre;
 }
