@@ -33,5 +33,5 @@ class PowerRanger : public Fighter
                 virtual string getNombre();
 
                 // toString
-                virtual void toString();
+                virtual string toString();
 };
