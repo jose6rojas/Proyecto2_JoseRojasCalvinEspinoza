@@ -53,7 +53,7 @@ bool PowerRanger::getTieneHE()
 }
 
 // toString
-string Fighter::toString()
+string PowerRanger::toString()
 {
 	return NULL;
 }
