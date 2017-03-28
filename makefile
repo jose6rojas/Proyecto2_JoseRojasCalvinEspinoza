@@ -1,8 +1,11 @@
-Main:	Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o
-	g++ Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o -o Main
+Main:	Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o Run.o
+	g++ Main.o Fighter.o PowerRanger.o Superhero.o NintendoChar.o PSChar.o PowerRangerRojo.o Spiderman.o Mario.o NathanDrake.o Run.o -lncurses -o Main
 
-Main.o:	Main.cpp Fighter.h PowerRanger.h Superhero.h NintendoChar.h PSChar.h PowerRangerRojo.h Spiderman.h Mario.h NathanDrake.h
+Main.o:	Main.cpp Run.h Fighter.h PowerRanger.h Superhero.h NintendoChar.h PSChar.h PowerRangerRojo.h Spiderman.h Mario.h NathanDrake.h
 	g++ -c Main.cpp
+
+Run.o: Run.cpp Fighter.h PowerRanger.h Superhero.h NintendoChar.h PSChar.h PowerRangerRojo.h Spiderman.h Mario.h NathanDrake.h
+	g++ -c Run.cpp
 
 Fighter.o:	PowerRanger.h Superhero.h NintendoChar.h PSChar.h PowerRangerRojo.h Spiderman.h Mario.h NathanDrake.h Fighter.h Fighter.cpp
 	g++ -c Fighter.cpp

@@ -7,7 +7,6 @@
 #include "Mario.h"
 #include "Spiderman.h"
 #include "NathanDrake.h"
-#include "Run.h"
 
 #include <string>
 #include <iostream>
@@ -15,11 +14,12 @@
 #include <sstream>
 #include <ncurses.h>
 
-using namespace std;
+class Run {
+private:
+	/* data */
 
-int main(int argc, char const *argv[]) {
-	Run* prog = new Run();
-	int retval = prog -> run();
-	delete prog;
-	return retval;
-}
+public:
+	Run();
+	int run();
+	//virtual ~Run ();
+};
