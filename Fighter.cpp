@@ -10,7 +10,7 @@ Fighter::Fighter(string nombre)
 {
 	this -> nombre = nombre;
 }
-
+/*
 // nombre
 void Fighter::setNombre(string nombre)
 {
@@ -25,4 +25,4 @@ string Fighter::getNombre()
 string Fighter::toString()
 {
 	return NULL;
-}
+}*/

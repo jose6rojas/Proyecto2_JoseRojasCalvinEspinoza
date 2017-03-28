@@ -73,4 +73,11 @@ class Mario : public NintendoChar
 		string getNombre();
 
 		string toString();
+		int atacar()
+		{
+			if (tieneHammer)
+				return ataque * 2;
+			else
+				return ataque;
+		}
 };

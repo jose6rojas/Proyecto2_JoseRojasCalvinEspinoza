@@ -71,4 +71,11 @@ class Spiderman : public Superhero
 		string getNombre();
 
 		string toString();
+		int atacar()
+		{
+			if (tieneHE)
+				return ataque * 2;
+			else
+				return ataque;
+		}
 };

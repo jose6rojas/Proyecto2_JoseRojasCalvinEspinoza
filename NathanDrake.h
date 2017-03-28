@@ -71,4 +71,12 @@ class NathanDrake : public PSChar
 		string getNombre();
 
 		string toString();
+
+		int atacar()
+		{
+			if (tieneTesoro)
+				return ataque * 2;
+			else
+				return ataque;
+		}
 };

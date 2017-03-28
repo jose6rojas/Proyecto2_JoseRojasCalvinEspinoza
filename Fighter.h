@@ -17,9 +17,10 @@ class Fighter
 		Fighter(string); // nombre
 
 		// nombre
-		virtual void setNombre(string);
-		virtual string getNombre();
+		virtual void setNombre(string) = 0;
+		virtual string getNombre() = 0;
 
 		// toString
-		virtual string toString();
+		virtual string toString() = 0;
+		virtual int atacar() = 0;
 };

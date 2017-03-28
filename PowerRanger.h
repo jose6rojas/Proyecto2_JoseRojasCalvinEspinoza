@@ -34,4 +34,5 @@ class PowerRanger : public Fighter
 
                 // toString
                 virtual string toString();
+		virtual int atacar() = 0;
 };
