@@ -1,28 +1,37 @@
 #include "Run.h"
 
-Run::Run()
-{
-
-}
+Run::Run() { }
 
 int Run::run()
 {
 	vector<string> names;
 	vector<Fighter*> fighters;
-
-	//initscr();
-	//printw("HOLA");
-	//leerFighters(names, fighters);
-	strinstream menu;
+	
+	initscr();
+	// printw("HOLA");
+	// leerFighters(names, fighters);
+	// strinstream menu;
 	char opc;
-
-	menu << "MENU" << endl
+	
+	/* menu << "MENU" << endl
 	<< "1. Agregar Fighter" << endl
 	<< "2. Listar Fighters" << endl
 	<< "3. Realizar Simulacion" << endl;
 	cout << menu.str();
-	cin >> opc;
-
+	cin >> opc; */
+	
+	start_color();
+	init_pair(1, COLOR_WHITE, COLOR_BLUE);
+	attron(COLOR_PAIR(1));
+	printw("BATTLE ROYALE");
+	attroff(COLOR_PAIR(1));
+	printw("\n");
+	printw("1. Agregar Fighter\n");
+  	printw("2. Listar Fighters\n");
+  	printw("3. Realizar Simulacion\n");
+	printw("Ingrese su opcion: ");
+	opc = getch();
+	
 	stringstream name;
 	ifstream archivo;
 	archivo.open("Fighters.txt");
@@ -41,12 +50,12 @@ int Run::run()
 				str++;
 			}
 		}
-
+		
 		for (int i = 0; i < str; i++) {
 			names.push_back(split[i]);
 		}
 	}
-
+	
 	for (int i = 0; i < names.size(); i++) {
 		if (names[i] == "Mario")
 		{
@@ -54,11 +63,11 @@ int Run::run()
 			ifstream archivo;
 			archivo.open("Mario.txt");
 			if(archivo.is_open())
-			 {
+			{
 				player = new Mario();
 				archivo >> *player;
 				fighters.push_back(player);
-			 }
+			}
 		}
 		if (names[i] == "NathanDrake")
 		{
@@ -66,11 +75,11 @@ int Run::run()
 			ifstream archivo;
 			archivo.open("NathanDrake.txt");
 			if(archivo.is_open())
-			 {
+			{
 				player = new NathanDrake();
 				archivo >> *player;
 				fighters.push_back(player);
-			 }
+			}
 		}
 		if (names[i] == "PowerRangerRojo")
 		{
@@ -78,11 +87,11 @@ int Run::run()
 			ifstream archivo;
 			archivo.open("PowerRangerRojo.txt");
 			if(archivo.is_open())
-			 {
+			{
 				player = new PowerRangerRojo();
 				archivo >> *player;
 				fighters.push_back(player);
-			 }
+			}
 		}
 		if (names[i] == "Spiderman")
 		{
@@ -109,17 +118,16 @@ int Run::run()
 	else if (opc == '3')
 	{
 		imprimirFighter(fighters);
-		
 	}
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
 	//getch();
-	//endwin();
+	endwin();
 	return 0;
 }
 
@@ -303,7 +311,7 @@ void Run::agregarFighter()
 	info << name << ",";
 	output = info.str();
 
-	fstream outputFile(filename, ios::in | ios::out | ios::app);
+	fstream outputFile(filename, ios::in | ios::out | ios_base::app);
 	if (outputFile.is_open())
 	{
 		outputFile << output;
