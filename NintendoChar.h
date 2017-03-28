@@ -34,5 +34,12 @@ class NintendoChar : public Fighter
 
                 // toString
                 virtual string toString();
-		virtual int atacar()  = 0;
+		virtual int atacar() = 0;
+		/*
+		{
+			if (tieneHammer)
+				return ataque * 2;
+			else
+				return ataque;
+		}*/
 };
