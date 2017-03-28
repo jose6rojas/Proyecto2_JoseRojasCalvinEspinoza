@@ -6,20 +6,20 @@ int Run::run()
 {
 	vector<string> names;
 	vector<Fighter*> fighters;
-	
+
 	initscr();
 	// printw("HOLA");
 	// leerFighters(names, fighters);
 	// strinstream menu;
 	char opc;
-	
+
 	/* menu << "MENU" << endl
 	<< "1. Agregar Fighter" << endl
 	<< "2. Listar Fighters" << endl
 	<< "3. Realizar Simulacion" << endl;
 	cout << menu.str();
 	cin >> opc; */
-	
+
 	start_color();
 	init_pair(1, COLOR_WHITE, COLOR_BLUE);
 	attron(COLOR_PAIR(1));
@@ -31,7 +31,7 @@ int Run::run()
   	printw("3. Realizar Simulacion\n");
 	printw("Ingrese su opcion: ");
 	opc = getch();
-	
+
 	stringstream name;
 	ifstream archivo;
 	archivo.open("Fighters.txt");
@@ -50,12 +50,12 @@ int Run::run()
 				str++;
 			}
 		}
-		
+
 		for (int i = 0; i < str; i++) {
 			names.push_back(split[i]);
 		}
 	}
-	
+
 	for (int i = 0; i < names.size(); i++) {
 		if (names[i] == "Mario")
 		{
@@ -112,20 +112,20 @@ int Run::run()
 	}
 	else if (opc == '2')
 	{
-		//imprimirVector(names);
+		imprimirVector(names);
 		imprimirFighter(fighters);
 	}
 	else if (opc == '3')
 	{
 		imprimirFighter(fighters);
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 	//getch();
 	endwin();
 	return 0;
@@ -322,16 +322,22 @@ void Run::agregarFighter()
 
 void Run::imprimirVector(vector<string> vector1)
 {
+	stringstream out;
 	//recorre el vector para imprimir cada uno
         for (int j = 0; j < vector1.size(); j++) {
-                cout << j+1 << ") " << vector1.at(j) << endl;
+                out << j+1 << ") " << vector1.at(j) << "\n";
         }
+	printw(out.str().c_str());
+	getch();
 }
 
 void Run::imprimirFighter(vector<Fighter*> vector1)
 {
+	stringstream out;
 	//recorre el vector para imprimir cada uno
         for (int j = 0; j < vector1.size(); j++) {
-                cout << j+1 << ") " << vector1.at(j) -> getNombre() << endl;
+                out << j+1 << ") " << vector1.at(j) -> getNombre() << "\n";
         }
+	printw(out.str().c_str());
+	getch();
 }
