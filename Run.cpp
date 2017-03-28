@@ -217,17 +217,52 @@ void Run::leerFighters(vector<string> names, vector<Fighter*> fighters)
 
 void Run::agregarFighter()
 {
-	stringstream out;
+	// stringstream out;
 	string name;
 	char ans;
-	out << "FIGHTER" << endl
+	/* out << "FIGHTER" << endl
 	<< "1. Power Ranger" << endl
 	<< "2. Nintendo Character" << endl
 	<< "3. Playstation Character" << endl
 	<< "4. Superhero" << endl;
 	cout << out.str();
-	cin >> ans;
-
+	cin >> ans; */
+	
+	printw("\n");
+	start_color();
+        init_pair(2, COLOR_WHITE, COLOR_BLUE);
+        attron(COLOR_PAIR(2));
+        printw("FIGHTER");
+        attroff(COLOR_PAIR(2));
+	
+        printw("\n");
+	start_color();
+	init_pair(3, COLOR_RED, COLOR_WHITE);
+	attron(COLOR_PAIR(3));
+        printw("1. Power Ranger\n");
+	attroff(COLOR_PAIR(3));
+	
+	start_color();
+	init_pair(4, COLOR_WHITE, COLOR_RED);
+	attron(COLOR_PAIR(4));
+        printw("2. Nintendo Character\n");
+	attroff(COLOR_PAIR(4));
+	
+	start_color();
+	init_pair(5, COLOR_BLUE, COLOR_WHITE);
+	attron(COLOR_PAIR(5));
+        printw("3. PlayStation Character\n");
+	attroff(COLOR_PAIR(5));
+	
+	start_color();
+        init_pair(6, COLOR_YELLOW, COLOR_BLACK);
+        attron(COLOR_PAIR(6));
+        printw("4. Superhero\n");
+        attroff(COLOR_PAIR(6));
+	
+	printw("Ingrese su opcion: ");
+	ans = getch();
+	
 	if (ans == '1')
 	{
 		stringstream out2;
