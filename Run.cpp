@@ -13,6 +13,16 @@ int Run::run()
 	//initscr();
 	//printw("HOLA");
 	//leerFighters(names, fighters);
+	strinstream menu;
+	char opc;
+
+	menu << "MENU" << endl
+	<< "1. Agregar Fighter" << endl
+	<< "2. Listar Fighters" << endl
+	<< "3. Realizar Simulacion" << endl;
+	cout << menu.str();
+	cin >> opc;
+
 	stringstream name;
 	ifstream archivo;
 	archivo.open("Fighters.txt");
@@ -87,11 +97,25 @@ int Run::run()
 			 }
 		}
 	}
+	if (opc == '1')
+	{
+		agregarFighter();
+	}
+	else if (opc == '2')
+	{
+		//imprimirVector(names);
+		imprimirFighter(fighters);
+	}
+	else if (opc == '3')
+	{
+		imprimirFighter(fighters);
+		
+	}
 
-	agregarFighter();
 
-	imprimirVector(names);
-	imprimirFighter(fighters);
+
+
+
 
 
 	//getch();
