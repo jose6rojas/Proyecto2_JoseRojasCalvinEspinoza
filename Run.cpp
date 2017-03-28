@@ -265,14 +265,26 @@ void Run::agregarFighter()
 	
 	if (ans == '1')
 	{
-		stringstream out2;
+		// stringstream out2;
 		char ans2;
-
-		out2 << "POWER RANGER" << endl
+		
+		/* out2 << "POWER RANGER" << endl
 		<< "1. Red Power Ranger" << endl;
 		cout << out2.str();
-		cin >> ans2;
-
+		cin >> ans2; */
+		
+		printw("\n");
+		start_color();
+        	init_pair(7, COLOR_RED, COLOR_WHITE);
+        	attron(COLOR_PAIR(7));
+        	printw("POWER RANGER\n");
+        	attroff(COLOR_PAIR(7));
+		printw("\n");
+		printw("1. Power Ranger Rojo");
+		printw("\n");
+        	printw("Ingrese su opcion: ");
+        	ans2 = getch();
+		
 		ofstream file("PowerRangerRojo.txt", ios::in | ios::out);
 		file.open("PowerRangerRojo.txt");
 		PowerRangerRojo* fighter = new PowerRangerRojo("PowerRangerRojo", 150, 55, true, "Dinozord");
@@ -283,14 +295,26 @@ void Run::agregarFighter()
 	}
 	if (ans == '2')
 	{
-		stringstream out2;
+		// stringstream out2;
 		char ans2;
-
-		out2 << "NINTENDO CHARACTER" << endl
+		
+		/* out2 << "NINTENDO CHARACTER" << endl
 		<< "1. Mario" << endl;
 		cout << out2.str();
-		cin >> ans2;
-
+		cin >> ans2; */
+		
+		printw("\n");
+                start_color();
+                init_pair(8, COLOR_WHITE, COLOR_RED);
+                attron(COLOR_PAIR(8));
+                printw("NINTENDO CHARACTER\n");
+                attroff(COLOR_PAIR(8));
+                printw("\n");
+                printw("1. Mario");
+                printw("\n");
+                printw("Ingrese su opcion: ");
+                ans2 = getch();
+		
 		ofstream file("Mario.txt", ios::in | ios::out);
 		file.open("Mario.txt");
 		Mario* fighter = new Mario("Mario", 125, 75, true, "Mushroom");
@@ -301,13 +325,25 @@ void Run::agregarFighter()
 	}
 	if (ans == '3')
 	{
-		stringstream out2;
+		// stringstream out2;
 		char ans2;
-
-		out2 << "PLAYSTATION CHARACTER" << endl
+		
+		/* out2 << "PLAYSTATION CHARACTER" << endl
 		<< "1. Nathan Drake" << endl;
 		cout << out2.str();
-		cin >> ans2;
+		cin >> ans2; */
+		
+		printw("\n");
+                start_color();
+                init_pair(9, COLOR_BLUE, COLOR_WHITE);
+                attron(COLOR_PAIR(9));
+                printw("PLAYSTATION CHARACTER\n");
+                attroff(COLOR_PAIR(9));
+                printw("\n");
+                printw("1. Nathan Drake");
+                printw("\n");
+                printw("Ingrese su opcion: ");
+                ans2 = getch();
 
 		ofstream file("NathanDrake.txt", ios::in | ios::out);
 		file.open("NathanDrake.txt");
@@ -319,13 +355,25 @@ void Run::agregarFighter()
 	}
 	if (ans == '4')
 	{
-		stringstream out2;
+		// stringstream out2;
 		char ans2;
 
-		out2 << "SUPERHERO" << endl
+		/* out2 << "SUPERHERO" << endl
 		<< "1. Spiderman" << endl;
 		cout << out2.str();
-		cin >> ans2;
+		cin >> ans2; */
+		
+		printw("\n");
+                start_color();
+                init_pair(10, COLOR_YELLOW, COLOR_BLACK);
+                attron(COLOR_PAIR(10));
+                printw("SUPERHERO\n");
+                attroff(COLOR_PAIR(10));
+                printw("\n");
+                printw("1. Spiderman");
+                printw("\n");
+                printw("Ingrese su opcion: ");
+                ans2 = getch();
 
 		ofstream file("Spiderman.txt", ios::in | ios::out);
 		file.open("Spiderman.txt");
