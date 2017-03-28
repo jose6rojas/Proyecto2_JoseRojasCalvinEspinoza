@@ -112,12 +112,60 @@ int Run::run()
 	}
 	else if (opc == '2')
 	{
-		imprimirVector(names);
+		//imprimirVector(names);
 		imprimirFighter(fighters);
+		getch();
 	}
 	else if (opc == '3')
 	{
+		char opc1, opc2;
+		Fighter* peleador1, peleador2;
+		printw("\n");
+		printw("ELEGIR EL PRIMER PELEADOR");
 		imprimirFighter(fighters);
+		opc1 = getch();
+		printw("\n");
+		printw("ELEGIR EL SEGUNDO PELEADOR");
+		imprimirFighter(fighters);
+		opc2 = getch();
+
+		peleador1 = fighters[opc1-1];
+		peleador2 = fighters[opc2-1];
+		printw("\n");
+		printw("------------------------------------------------------------------------");
+		string name1, name2;
+		int hp1, defensa1, ataque1;
+		int hp2, defensa2, ataque2;
+
+		name1 = peleador1 -> getNombre();
+		name2 = peleador2 -> getNombre();
+		defensa1 = peleador1 -> getDefensa();
+		defensa2 = peleador2 -> getDefensa();
+		ataque1 = peleador1 -> atacar();
+		ataque2 = peleador2 -> atacar();
+		hp1 = defensa1 * 20;
+		hp2 = defensa2 * 20;
+
+
+		while(hp1 > 0 && hp2 > 0)
+		{
+			printw("\n");
+			printw(name1.c_str());
+			printw("\n");
+			printw("HP: ");
+			printw(to_string(hp1).c_str());
+			printw("\n");
+			printw("\n");
+			printw(name2.c_str());
+			printw("\n");
+			printw("HP: ");
+			printw(to_string(hp2).c_str());
+			printw("\n");
+			printw("\n");
+		}
+
+
+
 	}
 
 
@@ -227,42 +275,42 @@ void Run::agregarFighter()
 	<< "4. Superhero" << endl;
 	cout << out.str();
 	cin >> ans; */
-	
+
 	printw("\n");
 	start_color();
         init_pair(2, COLOR_WHITE, COLOR_BLUE);
         attron(COLOR_PAIR(2));
         printw("FIGHTER");
         attroff(COLOR_PAIR(2));
-	
+
         printw("\n");
 	start_color();
 	init_pair(3, COLOR_RED, COLOR_WHITE);
 	attron(COLOR_PAIR(3));
         printw("1. Power Ranger\n");
 	attroff(COLOR_PAIR(3));
-	
+
 	start_color();
 	init_pair(4, COLOR_WHITE, COLOR_RED);
 	attron(COLOR_PAIR(4));
         printw("2. Nintendo Character\n");
 	attroff(COLOR_PAIR(4));
-	
+
 	start_color();
-	init_pair(5, COLOR_BLUE, COLOR_WHITE);
+	init_pair(5, COLOR_GREEN, COLOR_WHITE);
 	attron(COLOR_PAIR(5));
         printw("3. PlayStation Character\n");
 	attroff(COLOR_PAIR(5));
-	
+
 	start_color();
         init_pair(6, COLOR_YELLOW, COLOR_BLACK);
         attron(COLOR_PAIR(6));
         printw("4. Superhero\n");
         attroff(COLOR_PAIR(6));
-	
+
 	printw("Ingrese su opcion: ");
 	ans = getch();
-	
+
 	if (ans == '1')
 	{
 		stringstream out2;
@@ -363,7 +411,6 @@ void Run::imprimirVector(vector<string> vector1)
                 out << j+1 << ") " << vector1.at(j) << "\n";
         }
 	printw(out.str().c_str());
-	getch();
 }
 
 void Run::imprimirFighter(vector<Fighter*> vector1)
@@ -374,5 +421,5 @@ void Run::imprimirFighter(vector<Fighter*> vector1)
                 out << j+1 << ") " << vector1.at(j) -> getNombre() << "\n";
         }
 	printw(out.str().c_str());
-	getch();
+
 }
